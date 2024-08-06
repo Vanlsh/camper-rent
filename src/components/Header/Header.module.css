@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 25px 0;
+}
+.navList {
+  display: flex;
+  gap: 10px;
+}
+.navLink {
+  padding: 10px;
+  font-weight: 700;
+  transition: opacity var(--transition-setting);
+}
+.navLink:hover {
+  opacity: 0.7;
+}
+.active {
+  color: var(--color-button-hover);
+}
