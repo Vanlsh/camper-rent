@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { CATALOG_INITIAL_STATE } from "./initialState";
 import { getCampers } from "./operations";
 
-const catalogSlice = createSlice({
-  name: "catalog",
+const campersSlice = createSlice({
+  name: "campers",
   initialState: CATALOG_INITIAL_STATE,
   reducers: {},
   extraReducers: (builder) => {
@@ -23,4 +23,4 @@ const catalogSlice = createSlice({
   },
 });
 
-export const catalogReducer = catalogSlice.reducer;
+export const campersReducer = campersSlice.reducer;

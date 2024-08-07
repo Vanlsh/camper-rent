@@ -1,7 +1,15 @@
+import CamperCart from "../CamperCart/CamperCart";
 
-const CatalogList = ({campers}) => {
+const CatalogList = ({ campers }) => {
+  return (
+    <ul>
+      {campers.map((camper) => (
+        <li key={camper._id}>
+          <CamperCart camper={camper} />
+        </li>
+      ))}
+    </ul>
+  );
+};
 
-  return <ul>{campers.map(camper=> )}</ul>;
-}
-
-export default CatalogList
+export default CatalogList;
