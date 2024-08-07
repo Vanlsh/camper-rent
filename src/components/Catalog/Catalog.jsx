@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCampers } from "../../redux/campers/operations";
 import CatalogList from "../CatalogList/CatalogList";
 import { selectCampers } from "../../redux/campers/selectors";
-import { LoadButton } from "../UI";
+import css from "./Catalog.module.css";
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -23,9 +23,9 @@ const Catalog = () => {
   return (
     <section>
       {campers && <CatalogList campers={campers} />}
-      <LoadButton type="button" onClick={handleLoadMore}>
+      <button className={css.button} type="button" onClick={handleLoadMore}>
         Load more
-      </LoadButton>
+      </button>
     </section>
   );
 };
