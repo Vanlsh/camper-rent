@@ -1,5 +1,9 @@
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
   <defs>
+   <symbol id="icon-location" viewBox="0 0 29 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.4" d="M26.4 13.333c0 9.333-12 17.333-12 17.333s-12-8-12-17.333a12.003 12.003 0 0 1 12-12 12.003 12.003 0 0 1 12 12z"/>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.4" d="M14.4 17.333a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+    </symbol>
     <symbol id="icon-freezer" viewBox="0 0 32 32">
       <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.08" d="M23.4 3H8.607a2 2 0 0 0-2 2v20.387a2 2 0 0 0 2 2H23.4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
       <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.08" d="M6.607 13.127h18.787m-15.081-2.56v-4.04m0 12.913V15.4M8.427 27.387v.7a.911.911 0 0 0 .907.913h1.647a.911.911 0 0 0 .914-.914v-.7m8.205.001v.7a.913.913 0 0 0 .914.914h1.653a.913.913 0 0 0 .914-.914v-.7"/>
