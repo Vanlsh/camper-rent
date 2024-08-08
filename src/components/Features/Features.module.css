@@ -22,8 +22,11 @@
   border-top: 1px solid rgba(16, 24, 40, 0.1);
 }
 .vehicleItem {
-  display: flex;
   justify-content: space-between;
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
 }
 .vehicleItem:not(:last-child) {
   margin-bottom: 14px;

@@ -7,3 +7,4 @@ export { default as Rating } from "./Rating/Rating";
 export { default as Location } from "./Location/Location";
 export { default as Category } from "./Category/Category";
 export { default as ReviewerRating } from "./ReviewerRating/ReviewerRating";
+export { default as BookInput } from "./BookInput/BookInput";
