@@ -10,6 +10,7 @@ const ModalBackdrop = ({ children, onClose }) => {
 
   const handleCloseModal = useCallback(
     (e) => {
+      e.stopPropagation();
       if (e.target === e.currentTarget || e.code === "Escape") {
         setActive(false);
         onClose();
@@ -36,11 +37,10 @@ const ModalBackdrop = ({ children, onClose }) => {
   }, [handleCloseModal]);
 
   return (
-    <div
-      className={dynamicStyle}
-      onClick={handleCloseModal}
-    >
-      {children}
+    <div className={dynamicStyle} onClick={handleCloseModal}>
+      <div className={s.wrapper} onClick={handleCloseModal}>
+        {children}
+      </div>
     </div>
   );
 };

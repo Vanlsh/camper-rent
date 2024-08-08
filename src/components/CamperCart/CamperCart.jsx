@@ -4,16 +4,24 @@ import icons from "../../assets/icons.svg";
 import clsx from "clsx";
 import { formatRentPrice, getCategories } from "../../helpers";
 import Category from "../UI/Category/Category";
+import { useModal } from "../../hooks/useModal";
+import { useCallback } from "react";
+import Modal from "../Modal/Modal";
 
 const CamperCart = ({ camper, liked = true }) => {
-  console.log(camper);
+  const setModal = useModal();
+  const closeModal = useCallback(() => {
+    setModal();
+  }, [setModal]);
   const categories = getCategories(camper);
-  console.log(categories);
 
-  const handleOpenDetails = () => {};
+  const handleOpenDetails = useCallback(() => {
+    setModal(<Modal camper={camper} onClose={closeModal} />);
+  }, [setModal, closeModal, camper]);
+
   return (
     <div className={css.container}>
-      <CamperImage src={camper.gallery[0]} />
+      <CamperImage src={camper.gallery[0]} alt="Camper photo" />
       <div className={css.info}>
         <div className={css.infoHeader}>
           <h1 className={css.name}>{camper.name}</h1>
