@@ -42,7 +42,7 @@
       <path stroke-linecap="round" stroke-width="2.4" d="M8.667 16A7.333 7.333 0 0 1 16 8.667"/>
       <path stroke-width="2.4" d="M16 19.333a3.333 3.333 0 1 0 0-6.665 3.333 3.333 0 0 0 0 6.665z"/>
     </symbol>
-    <symbol id="icon-twoHob" viewBox="0 0 32 32">
+    <symbol id="icon-hob" viewBox="0 0 32 32">
       <path fill="none" stroke="#101828" style="stroke:var(--color1, #101828)" stroke-width="2.4" d="M12 6.667h16a1.335 1.335 0 0 1 1.334 1.334v17.333A1.335 1.335 0 0 1 28 26.668H12m0-20.001H4a1.33 1.33 0 0 0-1.333 1.334v17.333A1.333 1.333 0 0 0 4 26.668h8m0-20.001v20"/>
       <path fill="none" stroke="#101828" style="stroke:var(--color1, #101828)" stroke-linejoin="round" stroke-linecap="round" stroke-width="2.4" d="M7.333 11.333V14m17.334-3.333-8 11.333"/>
       <path d="M8.667 18A1.333 1.333 0 1 0 6 18a1.333 1.333 0 0 0 2.667 0zM8.667 22A1.333 1.333 0 1 0 6 22a1.333 1.333 0 0 0 2.667 0z"/>

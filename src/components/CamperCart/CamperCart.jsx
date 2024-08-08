@@ -1,9 +1,8 @@
-import { CamperImage, LoadButton, Location, Rating } from "../UI";
+import { CamperImage, LoadButton, Location, Rating, Category } from "../UI";
 import css from "./CamperCart.module.css";
 import icons from "../../assets/icons.svg";
 import clsx from "clsx";
 import { formatRentPrice, getCategories } from "../../helpers";
-import Category from "../UI/Category/Category";
 import { useModal } from "../../hooks/useModal";
 import { useCallback } from "react";
 import Modal from "../Modal/Modal";

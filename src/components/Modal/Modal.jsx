@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { formatRentPrice } from "../../helpers";
+import { formatRentPrice, getAllDetails } from "../../helpers";
 import { CamperImage, Location, Rating } from "../UI";
 import NavRadioButton from "../UI/NavRadioButton/NavRadioButton";
 import css from "./Modal.module.css";
@@ -11,8 +11,7 @@ const navList = ["features", "reviews"];
 
 const Modal = ({ camper, onClose }) => {
   const [selectedNav, setSelectedNav] = useState(navList[0]);
-
-  console.log(camper);
+  const { vehicle, details } = getAllDetails(camper);
 
   const handleChangeNav = (e) => {
     setSelectedNav(e.target.value);
@@ -56,8 +55,10 @@ const Modal = ({ camper, onClose }) => {
             ))}
           </ul>
           <div className={css.footerWrapper}>
-            {selectedNav === navList[0] && <Features />}
-            {selectedNav === navList[1] && <Reviews />}
+            {selectedNav === navList[0] && (
+              <Features vehicle={vehicle} details={details} />
+            )}
+            {selectedNav === navList[1] && <Reviews reviews={camper.reviews} />}
             <BookForm />
           </div>
         </div>

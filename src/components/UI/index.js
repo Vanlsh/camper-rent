@@ -5,3 +5,5 @@ export { default as CamperImage } from "./CamperImage/CamperImage";
 export { default as LikeButton } from "./LikeButton/LikeButton";
 export { default as Rating } from "./Rating/Rating";
 export { default as Location } from "./Location/Location";
+export { default as Category } from "./Category/Category";
+export { default as ReviewerRating } from "./ReviewerRating/ReviewerRating";
