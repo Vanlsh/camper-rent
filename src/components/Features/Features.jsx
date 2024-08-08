@@ -3,8 +3,6 @@ import icons from "../../assets/icons.svg";
 import css from "./Features.module.css";
 
 const Features = ({ vehicle, details }) => {
-  console.log(vehicle);
-  console.log(details);
   return (
     <div className={css.container}>
       <ul className={css.categoryList}>

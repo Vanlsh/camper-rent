@@ -6,6 +6,11 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
 }
+.calenderWrapper {
+  position: relative;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
 .title {
   font-weight: 600;
   font-size: 20px;
@@ -16,7 +21,7 @@
   color: var(--color-font-second);
   margin-bottom: 24px;
 }
-.form button {
+.form > button {
   margin-top: 24px;
 }
 

@@ -60,8 +60,6 @@ const Filters = () => {
         data[key] = value;
       }
     });
-
-    console.log("Form Data:", data);
   };
   return (
     <form className={css.form} onSubmit={handleSubmit}>

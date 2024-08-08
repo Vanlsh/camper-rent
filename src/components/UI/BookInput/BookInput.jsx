@@ -1,6 +1,8 @@
+import clsx from "clsx";
 import css from "./BookInput.module.css";
 
-const BookInput = ({ iconPath, ...rest }) => {
+const BookInput = ({ iconPath, error, register = {}, field = {}, ...rest }) => {
+  console.log("error", error);
   return (
     <div className={css.wrapper}>
       {iconPath && (
@@ -8,7 +10,13 @@ const BookInput = ({ iconPath, ...rest }) => {
           <use xlinkHref={iconPath}></use>
         </svg>
       )}
-      <input {...rest} className={css.input} />
+      <input
+        {...field}
+        {...register}
+        {...rest}
+        className={clsx(css.input, { [css.errorInput]: error?.message })}
+      />
+      {error && <p className={css.error}>{error.message}</p>}
     </div>
   );
 };

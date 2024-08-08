@@ -34,7 +34,21 @@
   right: 18px;
   top: 50%;
   transform: translateY(-50%);
+  pointer-events: none;
 }
 .icon + .input {
   padding-right: 48px;
+}
+
+.error {
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  transform: translateY(100%);
+  font-size: 10px;
+  color: red;
+  line-height: 1;
+}
+.errorInput {
+  border: 1px solid red;
 }
