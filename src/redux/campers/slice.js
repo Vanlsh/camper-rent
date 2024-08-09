@@ -9,6 +9,7 @@ const campersSlice = createSlice({
     builder
       .addCase(getCampers.pending, (state) => {
         state.error = null;
+        state.data = null;
       })
       .addCase(getCampers.fulfilled, (state, action) => {
         state.data = action.payload;

@@ -50,7 +50,7 @@ const Catalog = () => {
   const isShowButton =
     !isLoading &&
     !errorMessage &&
-    (isNextPage || slicedDate.length !== campers.length);
+    (isNextPage || slicedDate.length !== campers?.length);
 
   return (
     <section className={css.container}>

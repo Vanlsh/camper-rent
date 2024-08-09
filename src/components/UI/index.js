@@ -10,3 +10,4 @@ export { default as ReviewerRating } from "./ReviewerRating/ReviewerRating";
 export { default as BookInput } from "./BookInput/BookInput";
 export { default as Message } from "./Message/Message";
 export { default as Loader } from "./Loader/Loader";
+export { default as InvisibleTitle } from "./InvisibleTitle/InvisibleTitle";
