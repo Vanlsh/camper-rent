@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import icons from "../../assets/icons.svg";
 import { generateCalendar, isSameDate } from "../../helpers/calendar";
 import css from "./Calendar.module.css";
@@ -8,6 +8,13 @@ import { daysOfWeek, months } from "../../constants";
 const Calendar = ({ date: currentDate, handleSetDate, onClose }) => {
   const date = currentDate || new Date();
   const [selectedDate, setSelectedDate] = useState(date);
+  const calendarRef = useRef(null);
+
+  useEffect(() => {
+    calendarRef.current.scrollIntoView({ behavior: "smooth" });
+    window.addEventListener("click", onClose);
+    return () => window.removeEventListener("click", onClose);
+  }, [onClose]);
 
   const handlePrev = () => {
     setSelectedDate(
@@ -30,7 +37,11 @@ const Calendar = ({ date: currentDate, handleSetDate, onClose }) => {
   const currentYear = selectedDate.getFullYear();
   const days = generateCalendar(selectedDate.getMonth() + 1, currentYear);
   return (
-    <div className={css.container} onClick={(e) => e.stopPropagation()}>
+    <div
+      className={css.container}
+      onClick={(e) => e.stopPropagation()}
+      ref={calendarRef}
+    >
       <div className={css.header}>
         <button
           onClick={handlePrev}
@@ -80,127 +91,3 @@ const Calendar = ({ date: currentDate, handleSetDate, onClose }) => {
 };
 
 export default Calendar;
-
-// import { forwardRef, useState } from "react";
-// import { BookInput } from "../UI";
-// import DatePicker from "react-datepicker";
-// import icons from "../../assets/icons.svg";
-// import "react-datepicker/dist/react-datepicker.css";
-
-// const Calendar = () => {
-//   const [startDate, setStartDate] = useState(null);
-//   const Input = forwardRef(function Input({ value, onClick }, ref) {
-//     return (
-//       <BookInput
-//         type="text"
-//         value={startDate ? value : ""}
-//         placeholder="Booking date"
-//         iconPath={icons + "#icon-calendar"}
-//         onClick={onClick}
-//         ref={ref}
-//         style={{ cursor: "pointer" }}
-//         disable
-//       />
-//     );
-//   });
-//   return (
-//     <DatePicker
-//       selected={startDate || new Date()}
-//       onChange={(date) => setStartDate(date)}
-//       customInput={<Input />}
-//     />
-//   );
-// };
-
-// export default Calendar;
-
-// import { useState } from "react";
-// import "./Clendar.css"; // You'll create this CSS file for styling
-
-// const Calendar = () => {
-//   const today = new Date();
-//   const [currentDate, setCurrentDate] = useState(today);
-
-//   // Helpers to get the first day and total days in the month
-//   const getFirstDayOfMonth = (date) =>
-//     new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-//   const getDaysInMonth = (date) =>
-//     new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-
-//   // Change month
-//   const changeMonth = (monthOffset) => {
-//     setCurrentDate(
-//       new Date(
-//         currentDate.getFullYear(),
-//         currentDate.getMonth() + monthOffset,
-//         1
-//       )
-//     );
-//   };
-
-//   const renderHeader = () => (
-//     <div className="calendar-header">
-//       <button type="button" onClick={() => changeMonth(-1)}>
-//         Previous
-//       </button>
-//       <h2>
-//         {currentDate.toLocaleString("default", { month: "long" })}{" "}
-//         {currentDate.getFullYear()}
-//       </h2>
-//       <button onClick={() => changeMonth(1)}>Next</button>
-//     </div>
-//   );
-
-//   const renderDaysOfWeek = () => {
-//     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-//     return (
-//       <div className="calendar-days">
-//         {days.map((day) => (
-//           <div key={day} className="calendar-day">
-//             {day}
-//           </div>
-//         ))}
-//       </div>
-//     );
-//   };
-
-//   const renderDates = () => {
-//     const firstDayOfMonth = getFirstDayOfMonth(currentDate);
-//     const daysInMonth = getDaysInMonth(currentDate);
-//     const dates = [];
-
-//     // Filling up empty slots before the first day
-//     for (let i = 0; i < firstDayOfMonth; i++) {
-//       dates.push(<div key={`empty-${i}`} className="calendar-date empty" />);
-//     }
-
-//     // Filling up the actual days
-//     for (let day = 1; day <= daysInMonth; day++) {
-//       dates.push(
-//         <div
-//           key={day}
-//           className={`calendar-date ${
-//             day === today.getDate() &&
-//             currentDate.getMonth() === today.getMonth()
-//               ? "today"
-//               : ""
-//           }`}
-//         >
-//           {day}
-//         </div>
-//       );
-//     }
-
-//     return <div className="calendar-dates">{dates}</div>;
-//   };
-
-//   return (
-//     <div className="calendar">
-//       {renderHeader()}
-//       {renderDaysOfWeek()}
-//       {renderDates()}
-//     </div>
-//   );
-// };
-
-// export default Calendar;

@@ -2,7 +2,6 @@ import clsx from "clsx";
 import css from "./BookInput.module.css";
 
 const BookInput = ({ iconPath, error, register = {}, field = {}, ...rest }) => {
-  console.log("error", error);
   return (
     <div className={css.wrapper}>
       {iconPath && (

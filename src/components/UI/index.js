@@ -8,3 +8,5 @@ export { default as Location } from "./Location/Location";
 export { default as Category } from "./Category/Category";
 export { default as ReviewerRating } from "./ReviewerRating/ReviewerRating";
 export { default as BookInput } from "./BookInput/BookInput";
+export { default as Message } from "./Message/Message";
+export { default as Loader } from "./Loader/Loader";

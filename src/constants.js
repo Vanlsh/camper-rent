@@ -17,3 +17,37 @@ export const months = [
   "December",
 ];
 export const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+export const vehicleEquipments = [
+  {
+    name: "ac",
+    text: "AC",
+    iconStyles: { stroke: "initial", fill: "initial" },
+  },
+  {
+    name: "automatic",
+    text: "Automatic",
+    iconStyles: { stroke: "#101828", fill: "transparent" },
+  },
+  {
+    name: "kitchen",
+    text: "Kitchen",
+    iconStyles: { stroke: "#101828", fill: "transparent" },
+  },
+  {
+    name: "tv",
+    text: "TV",
+    iconStyles: { stroke: "#101828", fill: "transparent" },
+  },
+  {
+    name: "shower",
+    text: "Shower/WC",
+    iconStyles: { stroke: "#101828", fill: "transparent" },
+  },
+];
+
+export const vehicleTypes = [
+  { name: "van", text: "Van" },
+  { name: "fullyIntegrated", text: "Fully Integrated" },
+  { name: "alcove", text: "Alcove" },
+];

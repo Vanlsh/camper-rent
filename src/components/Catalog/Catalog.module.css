@@ -1,3 +1,6 @@
+.container {
+  height: 100%;
+}
 .button {
   width: 145px;
   height: 56px;

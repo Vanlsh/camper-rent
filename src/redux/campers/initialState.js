@@ -1,6 +1,6 @@
 export const CATALOG_INITIAL_STATE = {
-  data: [],
+  data: null,
   isLoading: false,
-  isError: null,
+  error: null,
   nextPage: true,
 };
