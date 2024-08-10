@@ -6,6 +6,7 @@ import { useState } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
+import { formatDate } from "../../helpers/calendar";
 
 const validationSchema = yup.object({
   email: yup
@@ -34,12 +35,12 @@ const BookForm = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    window.location.reload();
   };
 
   const handleSetDate = (date) => {
     setDate(date);
-    setValue("date", date.toString());
+    setValue("date", formatDate(date));
     setError("date", null);
   };
 
@@ -50,7 +51,7 @@ const BookForm = () => {
   const renderCalendar = ({ field }) => {
     return (
       <BookInput
-        value={date ? date.toString() : ""}
+        value={date ? formatDate(date) : ""}
         field={field}
         type="text"
         placeholder="Booking date"

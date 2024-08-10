@@ -32,7 +32,11 @@ const CamperCart = ({ camper, liked = true }) => {
         <div className={css.infoHeader}>
           <h2 className={css.name}>{camper.name}</h2>
           <p className={css.price}>{formatRentPrice(camper.price)}</p>
-          <button className={css.buttonIcon} onClick={() => handleLike(camper)}>
+          <button
+            className={css.buttonIcon}
+            onClick={() => handleLike(camper)}
+            aria-label="Like button"
+          >
             <svg
               className={clsx(css.icon, { [css.liked]: liked })}
               width={24}

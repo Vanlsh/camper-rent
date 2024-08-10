@@ -46,7 +46,8 @@ const Catalog = () => {
   const slicedDate = campers ? campers.slice(0, 4 * page) : [];
 
   const isEmpty = campers?.length === 0 && !isLoading;
-  const isShowCalendar = !errorMessage && !isLoading && !!slicedDate.length;
+  // const isShowCalendar = !errorMessage && !isLoading && !!slicedDate.length;
+  const isShowCalendar = !errorMessage && !!slicedDate.length;
   const isShowButton =
     !isLoading &&
     !errorMessage &&

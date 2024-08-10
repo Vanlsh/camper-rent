@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import css from "./Header.module.css";
 import clsx from "clsx";
+import logo from "../../assets/logo.svg";
 
 const checkIsActive = ({ isActive }) =>
   clsx(css.navLink, { [css.active]: isActive });
@@ -8,7 +9,11 @@ const checkIsActive = ({ isActive }) =>
 const Header = () => {
   return (
     <header className={css.header}>
-      <Link to="/">LOGO</Link>
+      <Link to="/">
+        <svg className={css.icon} width={50} height={50}>
+          <use xlinkHref={logo + "#icon-logo"}></use>
+        </svg>
+      </Link>
       <nav>
         <ul className={css.navList}>
           <li>
