@@ -21,8 +21,8 @@ export const getSearchParams = (searchParams) => {
   const transmission = searchParams.get("automatic");
   const form = searchParams.get("vehicleTypes");
 
-  if (location) {
-    currentSearchParams.location = location;
+  if (location && location.trim()) {
+    currentSearchParams.location = location.trim();
   }
   if (transmission) {
     currentSearchParams.transmission = "automatic";
