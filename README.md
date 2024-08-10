@@ -1,8 +1,35 @@
-# React + Vite
+# Camper Rental Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to Start
 
-Currently, two official plugins are available:
+1. **Clone the repository**:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   ```sh
+   git clone https://github.com/your-username/camper.git
+   cd camper
+
+   ```
+
+2. **Install dependencies**:
+   npm install
+3. **Start the development server**:
+   npm run dev
+
+## Overview
+
+A web application for renting campers in Ukraine, featuring:
+
+1. **Home Page**: Overview of services.
+2. **Catalog Page**: Camper listings with filtering options.
+3. **Favorites Page**: User's favorite camper listings.
+
+## Backend
+
+- **MockAPI**: Use [mockapi.io](https://mockapi.io/) for backend. Create a resource with fields like `_id`, `name`, `price`, `rating`, etc. Populate with at least 13 diverse listings.
+- **Pagination**: Implement with 4 listings per page.
+
+## Routing
+
+- **"/"**: Home page.
+- **"/catalog"**: Camper catalog.
+- **"/favorites"**: User's favorites.
