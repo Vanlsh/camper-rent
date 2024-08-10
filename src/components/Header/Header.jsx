@@ -9,10 +9,11 @@ const checkIsActive = ({ isActive }) =>
 const Header = () => {
   return (
     <header className={css.header}>
-      <Link to="/">
+      <Link className={css.logo} to="/">
         <svg className={css.icon} width={50} height={50}>
           <use xlinkHref={logo + "#icon-logo"}></use>
         </svg>
+        <p className={css.logoTitle}>Campers</p>
       </Link>
       <nav>
         <ul className={css.navList}>
