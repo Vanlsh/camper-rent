@@ -1,17 +1,18 @@
+import { useCallback } from "react";
+import { useDispatch } from "react-redux";
+import clsx from "clsx";
+import Modal from "../Modal/Modal";
+import { useModal } from "../../hooks/useModal";
 import { CamperImage, LoadButton, Location, Rating, Category } from "../UI";
+import { formatRentPrice, getCategories } from "../../helpers";
+import { setFavorite } from "../../redux/favorites/slice";
 import css from "./CamperCart.module.css";
 import icons from "../../assets/icons.svg";
-import clsx from "clsx";
-import { formatRentPrice, getCategories } from "../../helpers";
-import { useModal } from "../../hooks/useModal";
-import { useCallback } from "react";
-import Modal from "../Modal/Modal";
-import { useDispatch } from "react-redux";
-import { setFavorite } from "../../redux/favorites/slice";
 
 const CamperCart = ({ camper, liked = true }) => {
   const dispatch = useDispatch();
   const setModal = useModal();
+
   const closeModal = useCallback(() => {
     setModal();
   }, [setModal]);
